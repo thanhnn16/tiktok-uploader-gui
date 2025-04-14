@@ -114,7 +114,7 @@
 ### 🔄 Basic Tauri Integration
 - [ ] Set up Rust commands structure
 - [x] Create basic Rust-to-JS communication
-- [ ] Test simple file system operations
+- [x] Test simple file system operations
 - [ ] Implement Python execution capability
 
 ## 🚀 Sprint 2: Authentication & Core Upload (Week 3-4)
