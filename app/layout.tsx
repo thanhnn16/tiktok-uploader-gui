@@ -1,42 +1,40 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Providers } from "./providers";
-import { AppNavbar } from "@/components/layout/navbar";
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import Sidebar from "@/components/sidebar"
+import MobileNav from "@/components/mobile-nav"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TikTok Uploader GUI",
-  description: "A GUI for the TikTok Uploader library",
-};
+  title: "TikTok Uploader",
+  description: "A Selenium-based automated TikTok video uploader",
+    generator: 'v0.dev'
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>
-          <AppNavbar />
-          <main className="container mx-auto max-w-7xl px-6 flex-grow pt-8">
-            {children}
-          </main>
-          <footer className="w-full flex items-center justify-center py-3">
-            {/* Footer content can be added later */}
-          </footer>
-        </Providers>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <div className="flex flex-col md:flex-row min-h-screen max-w-full overflow-hidden bg-[#F4F4F9]">
+            <Sidebar />
+            <div className="flex-1 flex flex-col w-full overflow-hidden md:ml-[240px]">
+              <MobileNav />
+              <main className="flex-1 overflow-y-auto w-full pt-16 md:pt-0 pb-16 md:pb-0">{children}</main>
+            </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
+
+
+import './globals.css'
