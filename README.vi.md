@@ -35,6 +35,13 @@ Một giao diện người dùng đồ họa (GUI) để tương tác với côn
 
 Giao diện này hoạt động dựa trên công cụ CLI [tiktok-uploader](https://github.com/wkaisertexas/tiktok-uploader) của [wkaisertexas](https://github.com/wkaisertexas). Vui lòng tham khảo tài liệu gốc để biết chi tiết về các tính năng và tùy chọn của CLI.
 
+## Lời cảm ơn
+
+*   Xin chân thành cảm ơn **[wkaisertexas](https://github.com/wkaisertexas)** đã tạo ra công cụ CLI [tiktok-uploader](https://github.com/wkaisertexas/tiktok-uploader) gốc, nền tảng cho dự án này.
+*   Cấu trúc frontend ban đầu được tạo bằng [v0.dev](https://v0.dev) của Vercel.
+*   Biểu tượng ứng dụng (`app-icon.svg`) được tạo bởi ChatGPT.
+*   Dự án này được phát triển với sự hỗ trợ của [Cursor](https://cursor.sh/) và Gemini 2.5 Pro.
+
 ## Cài đặt
 
 Để chạy dự án này cục bộ, hãy làm theo các bước sau:
